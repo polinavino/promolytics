@@ -1,0 +1,69 @@
+
+======================================================================
+FAMILIES: agreement and clustering of competing promotability measures
+======================================================================
+
+Panel: 10 competing measures (a priori families):
+  nuclear_receptor         NR-AhR, NR-PPAR-gamma, NR-ER, NR-ER-LBD, NR-AR, NR-AR-LBD, NR-Aromatase
+  oxidative_proteo_stress  SR-ARE, SR-HSE, SR-MMP
+
+======================================================================
+Pairwise agreement (phi coefficient)
+======================================================================
+mean off-diagonal phi:   0.186
+median off-diagonal phi: 0.192
+max off-diagonal phi:    0.557
+(low values mean the measures genuinely disagree, none is a proxy for another)
+
+phi matrix:
+               NR-AhR  NR-PPAR-gamma  NR-ER  NR-ER-LBD  NR-AR  NR-AR-LBD  NR-Aromatase  SR-ARE  SR-HSE  SR-MMP
+NR-AhR           1.00           0.05   0.22       0.10   0.02       0.01          0.20    0.30    0.12    0.35
+NR-PPAR-gamma    0.05           1.00   0.03       0.15  -0.01       0.23          0.08    0.21    0.29    0.18
+NR-ER            0.22           0.03   1.00       0.53   0.23       0.22          0.09    0.19    0.07    0.26
+NR-ER-LBD        0.10           0.15   0.53       1.00   0.19       0.31          0.13    0.22    0.19    0.27
+NR-AR            0.02          -0.01   0.23       0.19   1.00       0.56          0.03    0.07   -0.02    0.02
+NR-AR-LBD        0.01           0.23   0.22       0.31   0.56       1.00          0.12    0.15    0.14    0.10
+NR-Aromatase     0.20           0.08   0.09       0.13   0.03       0.12          1.00    0.27    0.20    0.32
+SR-ARE           0.30           0.21   0.19       0.22   0.07       0.15          0.27    1.00    0.28    0.43
+SR-HSE           0.12           0.29   0.07       0.19  -0.02       0.14          0.20    0.28    1.00    0.28
+SR-MMP           0.35           0.18   0.26       0.27   0.02       0.10          0.32    0.43    0.28    1.00
+
+Most concordant measure pairs (phi, Jaccard of hit sets):
+  NR-AR          ~ NR-AR-LBD       phi=0.56  jaccard=0.40  [nuclear_receptor | nuclear_receptor]
+  NR-ER          ~ NR-ER-LBD       phi=0.53  jaccard=0.34  [nuclear_receptor | nuclear_receptor]
+  SR-ARE         ~ SR-MMP          phi=0.43  jaccard=0.34  [oxidative_proteo_stress | oxidative_proteo_stress]
+  NR-AhR         ~ SR-MMP          phi=0.35  jaccard=0.27  [nuclear_receptor | oxidative_proteo_stress]
+  NR-Aromatase   ~ SR-MMP          phi=0.32  jaccard=0.20  [nuclear_receptor | oxidative_proteo_stress]
+Least concordant measure pairs:
+  NR-AR          ~ SR-MMP          phi=0.02  jaccard=0.04  [nuclear_receptor | oxidative_proteo_stress]
+  NR-AhR         ~ NR-AR           phi=0.02  jaccard=0.04  [nuclear_receptor | nuclear_receptor]
+  NR-AhR         ~ NR-AR-LBD       phi=0.01  jaccard=0.03  [nuclear_receptor | nuclear_receptor]
+  NR-PPAR-gamma  ~ NR-AR           phi=-0.01  jaccard=0.01  [nuclear_receptor | nuclear_receptor]
+  NR-AR          ~ SR-HSE          phi=-0.02  jaccard=0.01  [nuclear_receptor | oxidative_proteo_stress]
+
+======================================================================
+Recovered families (average-linkage on 1 - phi)
+======================================================================
+
+k=2 clusters:
+  cluster 1 (nuclear_receptor): NR-ER, NR-ER-LBD, NR-AR, NR-AR-LBD
+  cluster 2 (nuclear_receptor/oxidative_proteo_stress): NR-AhR, NR-PPAR-gamma, NR-Aromatase, SR-ARE, SR-HSE, SR-MMP
+
+k=3 clusters:
+  cluster 1 (nuclear_receptor): NR-ER, NR-ER-LBD, NR-AR, NR-AR-LBD
+  cluster 2 (nuclear_receptor/oxidative_proteo_stress): NR-PPAR-gamma, SR-HSE
+  cluster 3 (nuclear_receptor/oxidative_proteo_stress): NR-AhR, NR-Aromatase, SR-ARE, SR-MMP
+
+k=4 clusters:
+  cluster 1 (nuclear_receptor): NR-AR, NR-AR-LBD
+  cluster 2 (nuclear_receptor): NR-ER, NR-ER-LBD
+  cluster 3 (nuclear_receptor/oxidative_proteo_stress): NR-PPAR-gamma, SR-HSE
+  cluster 4 (nuclear_receptor/oxidative_proteo_stress): NR-AhR, NR-Aromatase, SR-ARE, SR-MMP
+
+======================================================================
+Verdict
+======================================================================
+2-cluster recovery vs a priori NR/stress split: 70% of assays agree
+No single measure is canonical: mean pairwise phi is 0.19, and the panel
+splits into pathway families (e.g. ER pair, AR pair, and a mixed
+xenobiotic/oxidative-stress group) rather than collapsing to one axis.

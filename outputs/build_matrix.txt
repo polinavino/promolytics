@@ -1,0 +1,46 @@
+
+======================================================================
+BUILD MATRIX: harmonize Tox21 assays + genotoxicity + carcinogenicity
+======================================================================
+
+Raw sources:
+  tox21         7831 rows x 12 assays
+  ames          7278 rows (3974 mutagenic / 3304 not)
+  carcinogens    280 rows (60 carcinogen / 220 not)
+
+Assigning InChIKey connectivity blocks:
+  X                         7831 rows,    0 unparsed/failed keys
+  Drug                      7278 rows,    0 unparsed/failed keys
+  Drug                       280 rows,    0 unparsed/failed keys
+
+Unique chemicals after collapse:
+  tox21 7492, ames 6718, carcinogens 276
+
+======================================================================
+Harmonized matrix summary
+======================================================================
+chemicals (Tox21-anchored): 7492
+with any assay call:        7492
+with ames label:            2115
+with carcinogen label:      121
+  of which carcinogenic:    21
+with ngc defined:           44
+  of which non-genotoxic carcinogens: 8
+
+Promotability panel (competing measures), hit rate among tested:
+  NR-AhR           tested  6268  hits  757  (12.1%)  [nuclear_receptor]
+  NR-PPAR-gamma    tested  6185  hits  181  (2.9%)  [nuclear_receptor]
+  NR-ER            tested  5935  hits  783  (13.2%)  [nuclear_receptor]
+  NR-ER-LBD        tested  6655  hits  340  (5.1%)  [nuclear_receptor]
+  NR-AR            tested  6940  hits  302  (4.4%)  [nuclear_receptor]
+  NR-AR-LBD        tested  6459  hits  231  (3.6%)  [nuclear_receptor]
+  NR-Aromatase     tested  5552  hits  284  (5.1%)  [nuclear_receptor]
+  SR-ARE           tested  5616  hits  918  (16.3%)  [oxidative_proteo_stress]
+  SR-HSE           tested  6225  hits  366  (5.9%)  [oxidative_proteo_stress]
+  SR-MMP           tested  5574  hits  893  (16.0%)  [oxidative_proteo_stress]
+
+Held out (genotoxicity-leaning, not in panel):
+  SR-p53           tested  6483  hits  415  (6.4%)
+  SR-ATAD5         tested  6760  hits  262  (3.9%)
+
+wrote data/promolytics_matrix.csv

@@ -1,0 +1,36 @@
+
+======================================================================
+STABILITY: leave-one-measure-out robustness of the index
+======================================================================
+
+chemicals in the full index: 6824
+dropping each of the 10 panel measures in turn:
+
+  dropped          family                    spearman    top100
+  SR-ARE           oxidative_proteo_stress     0.8600     0.770
+  SR-MMP           oxidative_proteo_stress     0.9083     0.739
+  NR-ER            nuclear_receptor            0.9426     0.786
+  NR-AhR           nuclear_receptor            0.9526     0.639
+  NR-AR            nuclear_receptor            0.9755     0.681
+  NR-PPAR-gamma    nuclear_receptor            0.9789     0.681
+  SR-HSE           oxidative_proteo_stress     0.9793     0.695
+  NR-Aromatase     nuclear_receptor            0.9842     0.835
+  NR-AR-LBD        nuclear_receptor            0.9923     0.681
+  NR-ER-LBD        nuclear_receptor            0.9952     0.639
+
+======================================================================
+Verdict
+======================================================================
+worst-case rank correlation under any single drop: 0.8600
+mean rank correlation under single drops:          0.9569
+worst-case top-100 overlap under any single drop:  0.639
+most load-bearing for the bulk order: SR-ARE (spearman 0.8600 when dropped, oxidative_proteo_stress)
+most load-bearing for the top-100:    NR-AhR (top-100 overlap 0.639 when dropped, nuclear_receptor)
+most redundant measure:               NR-ER-LBD (spearman 0.9952 when dropped)
+
+=> the bulk order is stable (mean spearman 0.957) but the top-100 is not
+   (dropping NR-AhR changes about a third of the top-100).
+   The oxidative-stress measures move the bulk order most, the top-100 is
+   most sensitive to a receptor measure, so the two metrics disagree on which
+   measure is load-bearing. Nominations are only as stable as the panel, so a
+   promotion index has to publish its panel and its stability alongside it.

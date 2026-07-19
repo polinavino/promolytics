@@ -1,0 +1,59 @@
+
+======================================================================
+EXT 1: potency-weighted promotability index (Tox21 qHTS AC50)
+======================================================================
+
+Pulling qHTS AC50 data from PubChem (cached in data/raw/potency):
+  NR-AhR           AID 743122  actives   830  tested  8099
+  NR-PPAR-gamma    AID 743140  actives   204  tested  8099
+  NR-ER            AID 743079  actives   845  tested  8099
+  NR-ER-LBD        AID 743077  actives   385  tested  8099
+  NR-AR            AID 743053  actives   259  tested  8099
+  NR-AR-LBD        AID 743040  actives   330  tested  8099
+  NR-Aromatase     AID 743139  actives     0  tested  8099
+  SR-ARE           AID 743219  actives   995  tested  7329
+  SR-HSE           AID 743228  actives   397  tested  7329
+  SR-MMP           AID 720637  actives  1006  tested  8099
+
+dropping 1 measure(s) with no potency values: NR-Aromatase
+potency panel: 9 measures
+
+Assay titles returned by PubChem (verify against the column names):
+  NR-AhR           -> qHTS assay to identify small molecule that activate the aryl hydro
+  NR-PPAR-gamma    -> qHTS assay to identify small molecule agonists of the peroxisome p
+  NR-ER            -> qHTS assay to identify small molecule agonists of the estrogen rec
+  NR-ER-LBD        -> qHTS assay to identify small molecule agonists of the estrogen rec
+  NR-AR            -> qHTS assay to identify small molecule agonists of the androgen rec
+  NR-AR-LBD        -> qHTS assay to identify small molecule agonists of the androgen  re
+  SR-ARE           -> qHTS assay for small molecule agonists of the antioxidant response
+  SR-HSE           -> qHTS assay for small molecule activators of the heat shock respons
+  SR-MMP           -> qHTS assay for small molecule disruptors of the mitochondrial memb
+
+mapping 8393 CIDs to InChIKey...
+wrote data/potency_matrix.csv (8281 chemicals x 9 potency measures)
+
+potency index: 7988 chemicals scored (>= 5 measures tested)
+
+======================================================================
+Potency index vs binary index
+======================================================================
+chemicals in both indices: 5745
+Spearman(potency, binary): 0.863
+chemicals sharing a binary-index value with another: 5462
+of those, given a distinct value by potency:         4748 (87%)
+
+======================================================================
+Top promotability by potency index
+======================================================================
+  0.870  ZXJXZNDDNMQXFV  active in 7 pathways
+  0.853  KXSFECAJUBPPFE  active in 7 pathways
+  0.836  APTGJECXMIKIET  active in 5 pathways
+  0.836  ISHXLNHNDMZNMC  active in 5 pathways
+  0.829  RPLCPCMSCLEKRS  active in 5 pathways
+  0.811  ZLCUIOWQYBYEBG  active in 6 pathways
+  0.807  ICMWWNHDUZJFDW  active in 6 pathways
+  0.807  YNVGQYHLRCDXFQ  active in 6 pathways
+  0.803  UXLLXTLQVAJJIB  active in 6 pathways
+  0.803  ONKUMRGIYFNPJW  active in 6 pathways
+
+wrote data/potency_index.csv (7988 chemicals)

@@ -1,0 +1,79 @@
+
+======================================================================
+EXT 2: larger carcinogenicity anchor (IARC + NTP via PubChem)
+======================================================================
+
+fetching carcinogen classifications from PubChem:
+  page 1/6, cumulative labelled records: 595
+  page 2/6, cumulative labelled records: 1142
+  page 3/6, cumulative labelled records: 1261
+  page 4/6, cumulative labelled records: 1541
+  page 5/6, cumulative labelled records: 2177
+  page 6/6, cumulative labelled records: 2347
+labelled agents with a CID: 2347 (1354 positive / 993 negative)
+
+mapping 1958 CIDs to InChIKey...
+distinct chemicals labelled: 1926
+
+======================================================================
+Overlap gained
+======================================================================
+index-scored chemicals with a label:
+  Lagunin only:        110 (21 positive)
+  IARC/NTP:            571 (326 positive)
+  combined (any):      668 (346 positive)
+  non-genotoxic only:  273 (135 positive, Ames-negative)
+
+======================================================================
+Orientation against IARC/NTP anchor (all carcinogens)
+======================================================================
+labelled + scored: 571 (326 positive / 245 negative)
+rank AUC of index vs carc_iarc_ntp: 0.485  (Mann-Whitney p=0.531)
+
+label rate by number of promotion-pathway hits:
+  hits             n  labeled      pos     rate
+  0 hits        4335      291      173    59.5%
+  1 hit         1240      129       75    58.1%
+  2 hits         623       65       29    44.6%
+  3 hits         348       45       26    57.8%
+  4+ hits        278       41       23    56.1%
+
+======================================================================
+Orientation against combined anchor (all carcinogens)
+======================================================================
+labelled + scored: 668 (346 positive / 322 negative)
+rank AUC of index vs carc_any: 0.496  (Mann-Whitney p=0.853)
+
+label rate by number of promotion-pathway hits:
+  hits             n  labeled      pos     rate
+  0 hits        4335      354      184    52.0%
+  1 hit         1240      149       78    52.3%
+  2 hits         623       72       31    43.1%
+  3 hits         348       50       30    60.0%
+  4+ hits        278       43       23    53.5%
+
+======================================================================
+Orientation against non-genotoxic carcinogens only (Ames-negative)
+======================================================================
+labelled + scored: 273 (135 positive / 138 negative)
+rank AUC of index vs ngc_expanded: 0.514  (Mann-Whitney p=0.678)
+
+label rate by number of promotion-pathway hits:
+  hits             n  labeled      pos     rate
+  0 hits        4335      157       82    52.2%
+  1 hit         1240       57       20    35.1%
+  2 hits         623       31       13    41.9%
+  3 hits         348       19       14    73.7%
+  4+ hits        278        9        6    66.7%
+
+======================================================================
+Reading
+======================================================================
+Expanding the anchor tenfold does not, on its own, make the index orient.
+The IARC/NTP list is dominated by genotoxic carcinogens (initiators) and is
+selection-biased toward suspected carcinogens, so the label rate is near
+flat across promotion-hit counts. Restricting to non-genotoxic (Ames-negative)
+carcinogens is the correct anchor for a promotion index. The lesson is about
+anchor validity, not anchor size: a bigger wrong anchor is still the wrong one.
+
+wrote data/carcinogen_labels_iarc_ntp.csv

@@ -1,0 +1,63 @@
+
+======================================================================
+EXT 5: in-silico promolytic screen (LINCS L1000 connectivity)
+======================================================================
+
+Promotion signature:
+  UP   (20 genes): IL6, IL1B, TNF, CXCL8, CCL2, PTGS2, NFKB1, NFKBIA, MMP9, VEGFA, CCND1, MYC, JUN, FOS, SPP1, TIMP1, SERPINE1, ICAM1, CXCL1, CXCL2
+  DOWN (7 genes): CDKN1A, CDKN2A, GADD45A, SOD2, TXNIP, PTEN, TP53
+
+querying L1000CDS2 for reversers (candidate promolytics)...
+querying L1000CDS2 for mimickers (candidate promoters)...
+
+======================================================================
+Candidate promolytics (reverse the promotion signature)
+======================================================================
+  compound                     hits     best     mean
+  geldanamycin                    5    0.308    0.285
+  AZD-7762                        4    0.346    0.337
+  canertinib                      3    0.385    0.346
+  HG-6-64-01                      2    0.385    0.365
+  vorinostat                      2    0.346    0.327
+  dasatinib                       2    0.346    0.327
+  afatinib                        2    0.308    0.308
+  Mevastatin                      1    0.385    0.385
+  linifanib                       1    0.385    0.385
+  GSK-2126458                     1    0.385    0.385
+  simvastatin                     1    0.346    0.346
+  gefitinib                       1    0.346    0.346
+  FLUVASTATIN                     1    0.308    0.308
+  MITOMYCIN C                     1    0.308    0.308
+  7811943                         1    0.308    0.308
+
+======================================================================
+Candidate promoters (mimic the promotion signature)
+======================================================================
+  compound                     hits     best     mean
+  BRD-K04853698                   6    0.423    0.346
+  Narciclasine                    4    0.385    0.327
+  phorbol-12-myristate-13-ac      3    0.385    0.333
+  Ingenol 3, 20-dibenzoate        3    0.385    0.359
+  BRD-K91145395                   2    0.346    0.327
+  cinobufagin                     2    0.308    0.308
+  HY-10159                        2    0.308    0.308
+  LDN-193189                      1    0.385    0.385
+  nilotinib                       1    0.385    0.385
+  DIGOXIN                         1    0.346    0.346
+  Etoposide                       1    0.346    0.346
+  PERIPLOCYMARIN                  1    0.346    0.346
+  Ki 8751                         1    0.346    0.346
+  10006350                        1    0.346    0.346
+  C3930                           1    0.346    0.346
+
+======================================================================
+Reading
+======================================================================
+Reversers are the in-silico promolytic shortlist. The most recurring hits are
+an HSP90 inhibitor and a Chk1 inhibitor plus several EGFR inhibitors, and
+classes already studied as chemopreventives (HDAC inhibitors, statins,
+PI3K/mTOR inhibitors) also appear. The mimicker side is the sanity check:
+phorbol esters, the textbook tumour promoters, appear among the top hits.
+This is connectivity-based hypothesis generation, not a claim per compound.
+
+wrote data/lincs_candidates.csv

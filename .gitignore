@@ -1,0 +1,11 @@
+# Downloaded and derived data are regenerable from analysis/download_data.py
+# and analysis/build_matrix.py. The tracked source of truth is outputs/.
+data/raw/
+data/*.csv
+
+# python
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.DS_Store
+.vscode/

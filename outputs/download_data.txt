@@ -1,0 +1,9 @@
+
+======================================================================
+DOWNLOAD DATA: TDC datasets from Harvard Dataverse
+======================================================================
+  tox21                  present (712331 bytes), skipping
+  ames                   present (344128 bytes), skipping
+  carcinogens_lagunin    present (20221 bytes), skipping
+
+raw data in data/raw

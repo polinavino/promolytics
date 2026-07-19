@@ -1,0 +1,73 @@
+
+======================================================================
+AVERAGE RANK: consensus poset + weight-free promotability index
+======================================================================
+
+chemicals with a stable index (>= 5 measures tested): 6824
+promotability index range: 0.440 .. 0.958, mean 0.505
+
+======================================================================
+Consensus poset (Pareto dominance on hit-vectors, complete cases)
+======================================================================
+complete-case chemicals:        3013
+distinct hit-patterns:          90
+fraction of pairs comparable:   0.961
+  (of which tied, same pattern: 0.593)
+incomparable pairs:             176949 of 4537578
+maximal (undominated) patterns: 15, covering 22 chemicals
+
+Among active chemicals only (>= 1 promotion hit):
+  active chemicals:             702
+  fraction of pairs comparable: 0.281
+  incomparable pairs:           176949 of 246051
+  => the consensus abstains on 72% of active pairs
+
+Maximal (undominated) promotion profiles, broadest first:
+   7 hits: NR-AR, NR-AR-LBD, NR-Aromatase, NR-ER, NR-ER-LBD, SR-ARE, SR-MMP  (1 chemicals)
+   6 hits: NR-AhR, NR-Aromatase, NR-ER-LBD, SR-ARE, SR-HSE, SR-MMP  (1 chemicals)
+   6 hits: NR-Aromatase, NR-ER-LBD, NR-PPAR-gamma, SR-ARE, SR-HSE, SR-MMP  (1 chemicals)
+   5 hits: NR-AR-LBD, NR-ER, NR-ER-LBD, SR-HSE, SR-MMP  (1 chemicals)
+   5 hits: NR-AhR, NR-ER, NR-ER-LBD, SR-ARE, SR-MMP  (6 chemicals)
+   5 hits: NR-ER, NR-ER-LBD, SR-ARE, SR-HSE, SR-MMP  (3 chemicals)
+   5 hits: NR-AR, NR-AR-LBD, NR-ER, NR-PPAR-gamma, SR-MMP  (1 chemicals)
+   5 hits: NR-AR-LBD, NR-AhR, NR-PPAR-gamma, SR-ARE, SR-MMP  (1 chemicals)
+
+======================================================================
+Average-rank order vs the poset
+======================================================================
+strictly comparable pattern pairs checked: 728
+order inversions (aggregate contradicts consensus): 0
+=> the average-rank index is a linear extension of the consensus poset
+
+======================================================================
+Near-ties (consensus abstains, aggregate still decides)
+======================================================================
+active chemicals compared:           702
+incomparable pairs within eps=0.01:  98538
+  as a share of all active pairs:    0.400
+
+example near-ties (aggregate splits them, consensus does not):
+  d=0.0000  {NR-AR, NR-ER}  vs  {NR-AhR, SR-ARE}
+  d=0.0000  {NR-AR, NR-ER}  vs  {SR-ARE, SR-HSE}
+  d=0.0000  {NR-AR, NR-ER}  vs  {NR-AhR, SR-MMP}
+  d=0.0000  {NR-AR, NR-ER}  vs  {NR-PPAR-gamma, SR-ARE}
+  d=0.0000  {NR-AR, NR-ER}  vs  {NR-AhR, NR-Aromatase}
+  d=0.0000  {NR-AR, NR-ER}  vs  {NR-Aromatase, SR-MMP}
+
+======================================================================
+Top promotability (average-rank index)
+======================================================================
+  0.958  KXSFECAJUBPPFE  hits=7 {NR-AhR, NR-PPAR-gamma, NR-ER, NR-AR, NR-AR-LBD, SR-ARE, SR-HSE}
+  0.958  ISHXLNHNDMZNMC  hits=5 {NR-ER, NR-ER-LBD, NR-AR, NR-AR-LBD, SR-MMP}
+  0.905  LGLFFNDHMLKUMI  hits=8 {NR-AhR, NR-PPAR-gamma, NR-ER-LBD, NR-AR-LBD, NR-Aromatase, SR-ARE, SR-HSE, SR-MMP}
+  0.892  GKQPCPXONLDCMU  hits=6 {NR-AhR, NR-PPAR-gamma, NR-ER-LBD, NR-Aromatase, SR-ARE, SR-HSE}
+  0.888  BQPIGGFYSBELGY  hits=5 {NR-AhR, NR-PPAR-gamma, NR-ER-LBD, NR-AR-LBD, SR-HSE}
+  0.887  AIGDHFJPKNZUOR  hits=6 {NR-AhR, NR-PPAR-gamma, NR-ER, NR-AR-LBD, SR-HSE, SR-MMP}
+  0.887  UZCGKGPEKUCDTF  hits=5 {NR-AhR, NR-PPAR-gamma, NR-ER-LBD, NR-Aromatase, SR-HSE}
+  0.885  ICMWWNHDUZJFDW  hits=6 {NR-ER, NR-ER-LBD, NR-AR, NR-AR-LBD, SR-ARE, SR-HSE}
+  0.885  OTPSWLRZXRHDNX  hits=5 {NR-PPAR-gamma, NR-ER-LBD, NR-AR-LBD, SR-HSE, SR-MMP}
+  0.885  HXQVQGWHFRNKMS  hits=5 {NR-PPAR-gamma, NR-ER-LBD, NR-AR-LBD, SR-ARE, SR-HSE}
+  0.885  XEBWQGVWTUSTLN  hits=5 {NR-PPAR-gamma, NR-ER-LBD, NR-AR-LBD, SR-ARE, SR-HSE}
+  0.879  FMMWHPNWAFZXNH  hits=5 {NR-AhR, NR-PPAR-gamma, NR-AR-LBD, SR-ARE, SR-HSE}
+
+wrote data/promotability_index.csv (6824 chemicals)

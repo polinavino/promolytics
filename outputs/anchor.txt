@@ -1,0 +1,48 @@
+
+======================================================================
+ANCHOR: orient promotability against carcinogenicity
+======================================================================
+
+chemicals with a promotability index: 6824
+  with carcinogen label:  110
+  with ngc label:         42
+
+======================================================================
+Anchor 1: all carcinogens
+======================================================================
+labeled chemicals with an index: 110  (21 positive / 89 negative)
+rank AUC of index vs carcinogen: 0.551  (Mann-Whitney p=0.466)
+=> higher promotability index tracks carcinogen with positively
+
+label rate by number of promotion-pathway hits:
+  hits             n  labeled      pos     rate
+  0 hits        4335       69       12    17.4%
+  1 hit         1240       24        3    12.5%
+  2 hits         623        9        2    22.2%
+  3 hits         348        5        4    80.0%
+  4+ hits        278        3        0     0.0%
+(zero hits is the bottom extreme, 4+ the top, one or two the middle)
+
+======================================================================
+Anchor 2: non-genotoxic carcinogens (promotion proxy)
+======================================================================
+labeled chemicals with an index: 42  (8 positive / 34 negative)
+rank AUC of index vs ngc: 0.335  (Mann-Whitney p=0.145)
+=> higher promotability index tracks ngc with negatively
+
+label rate by number of promotion-pathway hits:
+  hits             n  labeled      pos     rate
+  0 hits        4335       21        7    33.3%
+  1 hit         1240       12        0     0.0%
+  2 hits         623        5        0     0.0%
+  3 hits         348        3        1    33.3%
+  4+ hits        278        1        0     0.0%
+(zero hits is the bottom extreme, 4+ the top, one or two the middle)
+
+======================================================================
+Reading
+======================================================================
+The anchor is sparse (tens of positives), so the bands are illustrative.
+What the framework asks is a direction check plus a shape check: the index
+should separate outcomes at its extremes and blur in its middle. Scale-up
+path is ToxCast/invitroDB potencies plus CPDB/IARC carcinogen calls.

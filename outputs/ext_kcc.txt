@@ -1,0 +1,43 @@
+
+======================================================================
+EXT 3: panel coverage of the key characteristics of carcinogens
+======================================================================
+
+key characteristics covered by the 12-assay panel:
+  ** KC1 electrophilic / metabolic activation   (no readout)
+     KC2 genotoxic                              SR-p53, SR-ATAD5
+  ** KC3 alters DNA repair / genomic instability (no readout)
+  ** KC4 epigenetic alterations                 (no readout)
+     KC5 oxidative stress                       SR-ARE, SR-HSE
+  ** KC6 chronic inflammation                   (no readout)
+  ** KC7 immunosuppression                      (no readout)
+     KC8 receptor-mediated effects              NR-AhR, NR-PPAR-gamma, NR-ER, NR-ER-LBD, NR-AR, NR-AR-LBD, NR-Aromatase
+  ** KC9 immortalisation                        (no readout)
+     KC10 altered cell proliferation/death      SR-MMP
+
+coverage gaps (no assay reads these): 6 of 10
+  ** KC1 electrophilic / metabolic activation
+  ** KC3 alters DNA repair / genomic instability
+  ** KC4 epigenetic alterations
+  ** KC6 chronic inflammation
+  ** KC7 immunosuppression
+  ** KC9 immortalisation
+KC6 (chronic inflammation) is the most promotion-relevant gap.
+
+======================================================================
+Do measures of the same key characteristic agree more?
+======================================================================
+mean phi within the same key characteristic: 0.171 (22 pairs)
+mean phi across key characteristics:         0.200 (23 pairs)
+=> measures of the same key characteristic agree no more than across
+
+======================================================================
+How many key characteristics does each chemical activate?
+======================================================================
+complete-case chemicals: 3013, spanning 3 promotion key characteristics
+  activates 0 of 3 key characteristics:  2311 chemicals (76.7%)
+  activates 1 of 3 key characteristics:   545 chemicals (18.1%)
+  activates 2 of 3 key characteristics:   112 chemicals (3.7%)
+  activates 3 of 3 key characteristics:    45 chemicals (1.5%)
+(a chemical hitting several key characteristics is a broader promoter
+ than one hitting many assays inside a single characteristic)

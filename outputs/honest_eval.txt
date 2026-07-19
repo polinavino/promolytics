@@ -1,0 +1,31 @@
+
+======================================================================
+HONEST EVAL: random vs scaffold-held-out cross-validation
+======================================================================
+
+NR-AhR: 6268 compounds (757 positive, 12.1%), 1909 distinct scaffolds
+  random    AUC 0.891 +/- 0.009  (5 folds)
+  scaffold  AUC 0.806 +/- 0.043  (5 folds)
+  overstatement (random - scaffold): +0.084
+
+SR-ARE: 5616 compounds (918 positive, 16.3%), 1567 distinct scaffolds
+  random    AUC 0.793 +/- 0.022  (5 folds)
+  scaffold  AUC 0.719 +/- 0.043  (5 folds)
+  overstatement (random - scaffold): +0.073
+
+carcinogen: 280 compounds (60 positive, 21.4%), 184 distinct scaffolds
+  random    AUC 0.867 +/- 0.023  (5 folds)
+  scaffold  AUC 0.831 +/- 0.075  (5 folds)
+  overstatement (random - scaffold): +0.036
+
+======================================================================
+Summary
+======================================================================
+  target         random scaffold   overstated
+  NR-AhR          0.891    0.806       +0.084
+  SR-ARE          0.793    0.719       +0.073
+  carcinogen      0.867    0.831       +0.036
+
+Every target loses accuracy under the honest scaffold split. A promotion
+model reported on random folds overstates how well it will call the
+chemistry it has not seen. Report the scaffold number.
